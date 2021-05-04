@@ -1,5 +1,13 @@
 import openpyxl
 
+def get_sheet(workbook_path, sheet_name):
+    '''
+    Returns sheet
+    '''
+    wb = openpyxl.load_workbook(workbook_path)
+    sheet = wb[sheet_name]
+    return sheet
+
 def create_protein_seq_text_file(start, end, sheet, col_name, filename, option = 'a'):
   '''
   Creates a txt file for all protein sequences in FASTA format

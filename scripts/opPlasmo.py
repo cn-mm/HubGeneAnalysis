@@ -8,6 +8,7 @@ import argparse
 import webbrowser
 import openpyxl
 import re
+import utils
 
 def openPlasmoWeb(gene_name):
   '''
@@ -17,7 +18,6 @@ def openPlasmoWeb(gene_name):
 
 
 if __name__ == '__main__':
-  print("Main")
   parser = argparse.ArgumentParser(description = 'Search PlasmoDB')
   parser.add_argument("--gene_name", metavar="G", required=True, type = str, help = "Please enter gene name")
   group = parser.add_argument_group('Using data from excel')
@@ -42,6 +42,8 @@ if __name__ == '__main__':
     column = args.column
     low = args.lo
     high = args.hi
+
+    # sheet = get_sheet(workbook_path, sheet_name)
 
     wb = openpyxl.load_workbook(workbook_path)
     sheet = wb[sheet_name]
