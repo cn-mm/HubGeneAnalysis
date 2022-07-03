@@ -1,5 +1,5 @@
 '''
-Open PlasmoDB for multiple genes enetered in the command line
+Open PlasmoDB for multiple genes entered in the command line
 '''
 import sys
 import webbrowser

@@ -1,5 +1,5 @@
 '''
-Uses REST API for FFPRED
+Uses REST API for FFPRED: Function Prediction
 Results on mail
 '''
 
@@ -28,12 +28,3 @@ def process(inp):
     inp = "".join(inp.split('\n')[1:])
     return inp, job_name
 
-# i = 44
-# while(sheet['B'+str(i)].value):
-#     if sheet['F'+str(i)].value == 1:
-#         inp = sheet['I'+str(i)].value
-#         inp = inp.strip()
-#         inp = "".join(inp.split('\n')[1:])
-#         job_name = sheet['B'+str(i)].value
-#         start_job(inp,job_name)
-#     i+=1  
